@@ -20,29 +20,6 @@ class MyApplauseLeftOver extends React.Component {
     }
 }
 
- class MyApplauseButton extends React.Component {
-     constructor(props) {
-         super(props);
-         this.state = {value: this.props.value};
-         this.buttonClicked = this.buttonClicked.bind(this);
-     }
-    
-     buttonClicked(event) {
-         if(this.state.value <= 14) {
-             this.setState({value: this.state.value + 1});
-         }
-     }
-    
-     render() {
-         return (
-             <div>
-                 <button onClick={this.buttonClicked}>拍手</button>
-                 <div>{this.state.value}</div>
-             </div>
-         );
-     }
- }
-
 class PostForm extends React.Component {
     constructor(props) {
         super(props);
@@ -67,6 +44,29 @@ class PostForm extends React.Component {
                 <textarea value={this.state.value} onChange={this.handleChange} />
                 <input type="submit" value="投稿" />
             </form>
+        );
+    }
+}
+
+class MyApplauseButton extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: this.props.value};
+        this.buttonClicked = this.buttonClicked.bind(this);
+    }
+   
+    buttonClicked(event) {
+        if(this.state.value <= 14) {
+            this.setState({value: this.state.value + 1});
+        }
+    }
+   
+    render() {
+        return (
+            <div>
+                <button onClick={this.buttonClicked}>拍手</button>
+                <div>{this.state.value}</div>
+            </div>
         );
     }
 }
