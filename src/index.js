@@ -20,28 +20,28 @@ class MyApplauseLeftOver extends React.Component {
     }
 }
 
-class MyApplauseButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: this.props.value};
-        this.buttonClicked = this.buttonClicked.bind(this);
-    }
+ class MyApplauseButton extends React.Component {
+     constructor(props) {
+         super(props);
+         this.state = {value: this.props.value};
+         this.buttonClicked = this.buttonClicked.bind(this);
+     }
     
-    buttonClicked(event) {
-        if(this.state.value <= 14) {
-            this.setState({value: this.state.value + 1});
-        }
-    }
+     buttonClicked(event) {
+         if(this.state.value <= 14) {
+             this.setState({value: this.state.value + 1});
+         }
+     }
     
-    render() {
-        return (
-            <div>
-                <button onClick={this.buttonClicked}>拍手</button>
-                <div>{this.state.value}</div>
-            </div>
-        );
-    }
-}
+     render() {
+         return (
+             <div>
+                 <button onClick={this.buttonClicked}>拍手</button>
+                 <div>{this.state.value}</div>
+             </div>
+         );
+     }
+ }
 
 class PostForm extends React.Component {
     constructor(props) {
@@ -79,8 +79,6 @@ class Body extends React.Component {
             applausegiven: 5,
             applause: 0,
             useroptions: ['Taro', 'Jiro']
-        //options : [{value: 1, label: 'Taro'}]
-        //users: localStorage.getItem(1)
         }
     }
 
@@ -113,13 +111,10 @@ class Body extends React.Component {
             <div>
                 <MyApplauseButton value={this.state.applause}/>
             </div>
-         </div>
-       );
-     }
+        </div>
+        );
     }
-
-
-  
+}
 
 // =======================================
 ReactDOM.render(
