@@ -99,7 +99,7 @@ class Body extends React.Component {
                 <p>pic</p>
                 {this.nameOptions}
             </div>
-            <div className="applause-info">
+            <div className="user-applause-info">
                 <MyApplauseLeftOver value={100 - this.state.applause * 2}/>
                 <p>拍手された: {this.state.applausegiven}</p>
             </div>
